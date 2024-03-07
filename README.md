@@ -5,8 +5,8 @@
   PT4KUSOFT
   <br>
 </h1>
- <h2 align="center">'Na Regale'</h2>
+ <h2 align="center">'Tu będzie inna nazwa aplikacji'</h2>
 
-## The project was created for the[ 100 Commits](https://100commitow.pl/) competition
-
-### Projekt w fazie Planowania...
+## Projekt stworzony z myslą o konkursie  [ 100 Commits](https://100commitow.pl/) 
+### Pierwszy zamysł projektu był zupełnie inny niż mam w głowie teraz.
+### W tej chwili projket jest w fazie projektowania oraz researchu.
