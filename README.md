@@ -10,3 +10,4 @@
 ## Projekt stworzony z myslą o konkursie  [ 100 Commits](https://100commitow.pl/) 
 ### Pierwszy zamysł projektu był zupełnie inny niż mam w głowie teraz.
 ### W tej chwili projket jest w fazie projektowania oraz researchu.
+### Start projektu 10 Marca ( wiec mam 90 dni na realizacje :D)
