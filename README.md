@@ -12,6 +12,8 @@
 ## _Twój asystent na spotkaniach 'daily'_ (nazwa robocza)
 
 Projekt reazlizowany w ramach wyzwania 100 commitów (https://100commitow.pl/)
+# Dziennik: 
+- [TUTAJ](DIARY.MD)
 
 
 ## Skąd pomysł na aplikację:
