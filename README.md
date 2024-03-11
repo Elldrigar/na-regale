@@ -40,8 +40,12 @@ Ta aplikacja zrobi to za nas, czyli wylosuje odpowiednią praktykę i ją przecz
 
 Technologie z jakich korzystam w projekcie:
 
-- Next.js (https://nextjs.org/)
--
+- Next.js ( https://nextjs.org/ )
+- NextAuth.js ( https://next-auth.js.org/ )
+- Shadcn UI ( https://ui.shadcn.com/ )
+- Tailwind ( https://tailwindcss.com/ )
+- Prisma ( https://www.prisma.io/ )
+- Supabase ( https://supabase.com/ )
 
 
 ## License
