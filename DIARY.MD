@@ -20,3 +20,12 @@
 - Zainstalowałem nextAuth.js
 - Dodałem Provider-a Githuba oraz Email (passwordless)
 - Oraz ogarnąłem potrzebne .env
+
+# 12.03.2024
+
+> Dzis kolejny dzień z nextAuth, prismą i supabase
+
+- Ogarnąłem konto na supabase
+- Połączyłem prisme z bazą
+- Wygenerowałem potrzebne modele w prismie
+- Etap konfiguracyjny, chyba zakończony :)
