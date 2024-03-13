@@ -29,3 +29,12 @@
 - Połączyłem prisme z bazą
 - Wygenerowałem potrzebne modele w prismie
 - Etap konfiguracyjny, chyba zakończony :)
+
+# 13.03.2024
+
+> Dziś szybko z braku czasu
+
+- Zrobilem page-a z buttonami do logowania za pomoca e-maila oraz github-a
+- To chwilowe rozwiązenie, zacznę to rzeźbić jak logowanie będzie działać :D
+- Button z githubem wyciągnąłem do osobnego componentu z powodu "use client"
+- 
