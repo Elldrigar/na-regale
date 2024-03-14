@@ -1,6 +1,7 @@
 import { Speech } from 'lucide-react'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/utils/auth'
+import LogoutButton from '@/components/auth/LogoutButton'
 
 const LandingPage = async () => {
     const session = await getServerSession(authOptions)
@@ -19,7 +20,14 @@ const LandingPage = async () => {
                     Wysłuchaj AI aj, aj ajjjj
                 </h1>
                 <div className='text-3xl'></div>
-                {session ? <h1>JESTES ZALOGOWANY</h1> : <h1>ZALOGUJ SIĘ!</h1>}
+                {session ? (
+                    <div>
+                        <h1>JESTES ZALOGOWANY</h1>
+                        <LogoutButton />
+                    </div>
+                ) : (
+                    <h1>ZALOGUJ SIĘ!</h1>
+                )}
             </div>
         </div>
     )
