@@ -37,4 +37,15 @@
 - Zrobilem page-a z buttonami do logowania za pomoca e-maila oraz github-a
 - To chwilowe rozwiązenie, zacznę to rzeźbić jak logowanie będzie działać :D
 - Button z githubem wyciągnąłem do osobnego componentu z powodu "use client"
-- 
+
+
+# 14.04.2024
+
+> Dziś dzień specjalny, dzień liczby PI, dzień narodzin Alberta Einsteina, 
+> oraz dzień śmierci Stephen-a Hawking-a.
+> W tym dniu zmarł również mój ojciec, więc dziś jest też kolejna rocznica jego śmierci.
+> I dziś padło na zrobienie logout buttona...
+
+- Dodałem redirect po zalogowaniu się
+- Route z logowaniem (auth) dla użytkowników zalgowanych jest niedostępny
+- Dodałem też button wylogowania się z sesji.
