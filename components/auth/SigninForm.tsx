@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
+import { toast } from '@/components/ui/use-toast'
 
 export default function SigninForm() {
     const [email, setEmail] = useState<null | string>(null)
@@ -15,6 +16,21 @@ export default function SigninForm() {
             callbackUrl: `${window.location.origin}`,
             redirect: false
         })
+
+        if(!signInResult?.ok) {
+            return toast({
+                title: "UPS, coś nie działa",
+                description: 'Coś poszło nie tak',
+                variant: 'destructive'
+            })
+        }
+
+        return toast({
+            title: "Sprawdź E-Mail",
+            description: 'Link do zalogowania został wysłany na twoją skrzynkę!',
+            variant: 'default'
+        })
+
     }
 
     return (
