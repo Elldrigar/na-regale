@@ -39,7 +39,7 @@
 - Button z githubem wyciągnąłem do osobnego componentu z powodu "use client"
 
 
-# 14.04.2024
+# 14.03.2024
 
 > Dziś dzień specjalny, dzień liczby PI, dzień narodzin Alberta Einsteina, 
 > oraz dzień śmierci Stephen-a Hawking-a.
@@ -49,3 +49,11 @@
 - Dodałem redirect po zalogowaniu się
 - Route z logowaniem (auth) dla użytkowników zalgowanych jest niedostępny
 - Dodałem też button wylogowania się z sesji.
+
+# 15.03.2024
+
+> Dziś podstawowe logowanie się za pomocą githuba lub e-maila (passwordless) zakończone.
+
+- Dodałem button do logowania
+- Dodałem funkcjonalnośc logowania się za pomoca e-maila i 'magicznego linku'
+- Dodałem Toster do powiadomien o errorze przy e-mailu i o wysłanej wiadomości
