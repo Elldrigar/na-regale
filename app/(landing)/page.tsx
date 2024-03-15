@@ -2,6 +2,8 @@ import { Speech } from 'lucide-react'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/utils/auth'
 import LogoutButton from '@/components/auth/LogoutButton'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const LandingPage = async () => {
     const session = await getServerSession(authOptions)
@@ -26,7 +28,13 @@ const LandingPage = async () => {
                         <LogoutButton />
                     </div>
                 ) : (
-                    <h1>ZALOGUJ SIĘ!</h1>
+                    <div>
+                        <h1>ZALOGUJ SIĘ!</h1>
+                        <Button asChild>
+                            <Link href='/auth'>Zaloguj się</Link>
+                        </Button>
+                    </div>
+
                 )}
             </div>
         </div>

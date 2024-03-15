@@ -12,6 +12,7 @@ import SignInGithub from '@/components/auth/SignInGithub'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/utils/auth'
 import { redirect } from 'next/navigation'
+import SigninForm from '@/components/auth/SigninForm'
 
 export default async function AuthRoute() {
     const session = await getServerSession(authOptions)
@@ -32,15 +33,7 @@ export default async function AuthRoute() {
                 </CardHeader>
                 <CardContent>
                     <div className='flex flex-col'>
-                        <div className='flex flex-col gap-y-2'>
-                            <Label>E-mail</Label>
-                            <Input
-                                name='email'
-                                type='email'
-                                placeholder='name@test.pl'
-                            />
-                        </div>
-                        <Button className='mt-4'>Zaloguj się E-Mailem</Button>
+                        <SigninForm />
                         <p className='mt-4 text-center'>LUB</p>
                         <SignInGithub />
                     </div>
