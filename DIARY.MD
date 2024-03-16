@@ -57,3 +57,11 @@
 - Dodałem button do logowania
 - Dodałem funkcjonalnośc logowania się za pomoca e-maila i 'magicznego linku'
 - Dodałem Toster do powiadomien o errorze przy e-mailu i o wysłanej wiadomości
+
+# 16.04.2024
+
+> Dziś dzień bez kodu.
+
+- Research API do text to speech ( https://elevenlabs.io/ )
+- Planowanie Aplikacji
+- 
