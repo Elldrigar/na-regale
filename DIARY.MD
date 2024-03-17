@@ -64,4 +64,11 @@
 
 - Research API do text to speech ( https://elevenlabs.io/ )
 - Planowanie Aplikacji
-- 
+
+17.04.2024
+
+> Niedziela krótka historia, planowanie projektu łatwe nie jest.
+
+- Planowanie ciąg dalszy
+- Dodałem do usera role, admina oraz user-a
+- Walczyłem również z błędem z Prismy :(
