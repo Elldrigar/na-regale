@@ -13,6 +13,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum UserRole {
+  ADMIN
+  USER
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -48,6 +53,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  role          UserRole  @default(USER)
 }
 
 model VerificationToken {
