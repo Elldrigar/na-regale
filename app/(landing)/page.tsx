@@ -1,12 +1,14 @@
+'use client'
+
 import { Speech } from 'lucide-react'
-import { currentRole, currentUser } from '@/lib/auth'
+
 import LogoutButton from '@/components/auth/LogoutButton'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { useSession, signIn, signOut } from "next-auth/react"
 
-const LandingPage = async () => {
-    const user = await currentUser()
-    const role = await currentRole()
+const LandingPage = () => {
+    const { data: session } = useSession()
     return (
         <div className='flex flex-col items-center justify-center'>
             <div className='flex flex-col items-center justify-center'>
@@ -22,12 +24,12 @@ const LandingPage = async () => {
                     Wysłuchaj AI aj, aj ajjjj
                 </h1>
                 <div className='text-3xl'></div>
-                {user? (
+                {session? (
                     <div>
                         <h1>JESTES ZALOGOWANY</h1>
                         <LogoutButton />
-                        {console.log(user)}
-                        {role}
+                        {console.log(session.user)}
+
                     </div>
                 ) : (
                     <div>

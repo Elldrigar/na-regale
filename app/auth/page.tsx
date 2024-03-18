@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import SignInGithub from '@/components/auth/SignInGithub'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '@/app/utils/auth'
+import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions'
 import { redirect } from 'next/navigation'
 import SigninForm from '@/components/auth/SigninForm'
 
