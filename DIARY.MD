@@ -72,3 +72,9 @@
 - Planowanie ciąg dalszy
 - Dodałem do usera role, admina oraz user-a
 - Walczyłem również z błędem z Prismy :(
+
+18.05.2024
+
+> Chaos, chaos, chaos XD
+
+- Zacząłem refactor chaosu
