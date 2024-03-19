@@ -58,14 +58,14 @@
 -   Dodałem funkcjonalnośc logowania się za pomoca e-maila i 'magicznego linku'
 -   Dodałem Toster do powiadomien o errorze przy e-mailu i o wysłanej wiadomości
 
-# 16.04.2024
+# 16.03.2024
 
 > Dziś dzień bez kodu.
 
 -   Research API do text to speech ( https://elevenlabs.io/ )
 -   Planowanie Aplikacji
 
-    17.04.2024
+# 17.03.2024
 
 > Niedziela krótka historia, planowanie projektu łatwe nie jest.
 
@@ -73,8 +73,15 @@
 -   Dodałem do usera role, admina oraz user-a
 -   Walczyłem również z błędem z Prismy :(
 
-    18.05.2024
+# 18.03.2024
 
 > Chaos, chaos, chaos XD
 
 -   Zacząłem refactor chaosu
+
+# 19.03.2024
+
+> Reset, totalny reset, zaczynam od zera :D
+
+- Usunąłem wszystkie poprzednie pliki z projektu
+- Zainstalowałem do nowa Next.js-a, shadcn, prettiera itd.
