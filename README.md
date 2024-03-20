@@ -6,6 +6,9 @@
   <br>
 </h1>
  <h2 align="center">'👾WORK IN PROGRESS👾'</h2>
+<div align='center'>
+  <img src="public/home.png" alt="Pt4kusoft" width="800">
+</div>
 
 # Daily Meetings Assistant (nazwa robocza)
 
