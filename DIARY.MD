@@ -85,3 +85,11 @@
 
 - Usunąłem wszystkie poprzednie pliki z projektu
 - Zainstalowałem do nowa Next.js-a, shadcn, prettiera itd.
+
+# 20.03.2024
+
+> Nowy początek i od razu lepiej
+
+- Landing page który mi się podoba
+- Dodany button "zacznij tutaj", który przenosi do logowania
+- Do readme dodałem screen
