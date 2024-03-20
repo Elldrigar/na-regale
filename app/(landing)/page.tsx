@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
-import { Roboto, Smooch_Sans } from 'next/font/google'
+import { Smooch_Sans } from 'next/font/google'
 import { cn } from '@/lib/utils'
+import { LoginButton } from '@/components/auth/login-button'
 
 const font = Smooch_Sans({
     weight: '200',
@@ -18,11 +19,15 @@ export default function Landing() {
                     )}>
                     Voice of Artificial Intelligence
                 </h1>
-                <p className='text-lg text-white'>During your meetings with the team</p>
+                <p className='text-lg text-white'>
+                    During your meetings with the team
+                </p>
                 <div>
-                    <Button size='lg' variant='secondary'>
-                       🤖 Start Here
-                    </Button>
+                    <LoginButton>
+                        <Button size='lg' variant='secondary'>
+                            🤖 Start Here
+                        </Button>
+                    </LoginButton>
                 </div>
             </div>
         </main>
