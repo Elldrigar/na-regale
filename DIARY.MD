@@ -93,3 +93,16 @@
 - Landing page który mi się podoba
 - Dodany button "zacznij tutaj", który przenosi do logowania
 - Do readme dodałem screen
+
+# 21.03.2024
+
+> Kilka dni nad auth posiedzę na pewno...
+
+- Dodane komopnenty do logowania
+- Komponenty na logowanie przez sociale
+
+# 22.03.2024
+
+> Do walidacji inputów użyję ZOD-a
+
+- Dodałem pierszy schema do logowania
