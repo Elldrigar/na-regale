@@ -105,4 +105,11 @@
 
 > Do walidacji inputów użyję ZOD-a
 
-- Dodałem pierszy schema do logowania
+- Dodałem pierwszy schema do logowania
+
+# 23.03.2024
+
+> Logowanie na śniadanie
+
+- Resolver z login schema do logowania
+- Formy do logowania w komponencie
