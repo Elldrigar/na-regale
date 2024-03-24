@@ -14,8 +14,15 @@ import {
     FormLabel
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { FormError } from '@/components/notification/form-error'
+import { FormSuccess } from '@/components/notification/form-success'
+import { loginAction } from '@/actions/login-action'
+import { useTransition } from 'react'
 
 export const LoginForm = () => {
+    const [isPending, startTransition] = useTransition()
+
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
@@ -23,6 +30,12 @@ export const LoginForm = () => {
             password: ''
         }
     })
+
+    const onSubmit = (values: z.infer<typeof LoginSchema>) => {
+        startTransition(() => {
+            loginAction(values)
+        })
+    }
 
     return (
         <CardWrapper
@@ -33,7 +46,7 @@ export const LoginForm = () => {
             showSocial>
             <Form {...form}>
                 <form
-                    onSubmit={form.handleSubmit(() => {})}
+                    onSubmit={form.handleSubmit(onSubmit)}
                     className='space-y-6'>
                     <div className='space-y-4'>
                         <FormField
@@ -43,6 +56,7 @@ export const LoginForm = () => {
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
                                         <Input
+                                            disabled={isPending}
                                             {...field}
                                             placeholder='email@email.pl'
                                             type='email'
@@ -52,7 +66,32 @@ export const LoginForm = () => {
                                 </FormItem>
                             )}
                         />
+                        <FormField
+                            name='password'
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Password</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            disabled={isPending}
+                                            {...field}
+                                            placeholder='******'
+                                            type='password'
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                     </div>
+                    <FormError message='Something went wrong!' />
+                    <FormSuccess message='Email sent!' />
+                    <Button
+                        type='submit'
+                        className='w-full'
+                        disabled={isPending}>
+                        Login
+                    </Button>
                 </form>
             </Form>
         </CardWrapper>
