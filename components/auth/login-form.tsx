@@ -34,6 +34,9 @@ export const LoginForm = () => {
     })
 
     const onSubmit = (values: z.infer<typeof LoginSchema>) => {
+        setError('')
+        setSuccess('')
+
         startTransition(() => {
             loginAction(values).then((data) => {
                 setError(data?.error)
@@ -89,8 +92,8 @@ export const LoginForm = () => {
                             )}
                         />
                     </div>
-                    <FormError message='Something went wrong!' />
-                    <FormSuccess message='Email sent!' />
+                    <FormError message={error} />
+                    <FormSuccess message={success} />
                     <Button
                         type='submit'
                         className='w-full'
