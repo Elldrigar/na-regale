@@ -14,7 +14,9 @@ import {
     FormLabel
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import {Button} from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
+import { FormError } from '@/components/notification/form-error'
+import { FormSuccess } from '@/components/notification/form-success'
 
 export const LoginForm = () => {
     const form = useForm<z.infer<typeof LoginSchema>>({
@@ -38,7 +40,7 @@ export const LoginForm = () => {
             showSocial>
             <Form {...form}>
                 <form
-                    onSubmit={form.handleSubmit(() => onSubmit)}
+                    onSubmit={form.handleSubmit(onSubmit)}
                     className='space-y-6'>
                     <div className='space-y-4'>
                         <FormField
@@ -74,7 +76,11 @@ export const LoginForm = () => {
                             )}
                         />
                     </div>
-                    <Button type='submit' className='w-full' >Login</Button>
+                    <FormError message='Something went wrong!' />
+                    <FormSuccess message='Email sent!' />
+                    <Button type='submit' className='w-full'>
+                        Login
+                    </Button>
                 </form>
             </Form>
         </CardWrapper>
