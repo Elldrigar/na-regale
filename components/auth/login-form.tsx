@@ -18,10 +18,12 @@ import { Button } from '@/components/ui/button'
 import { FormError } from '@/components/notification/form-error'
 import { FormSuccess } from '@/components/notification/form-success'
 import { loginAction } from '@/actions/login-action'
-import { useTransition } from 'react'
+import { useState, useTransition } from 'react'
 
 export const LoginForm = () => {
     const [isPending, startTransition] = useTransition()
+    const [error, setError] = useState<string | undefined>('')
+    const [success, setSuccess] = useState<string | undefined>('')
 
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
@@ -33,7 +35,10 @@ export const LoginForm = () => {
 
     const onSubmit = (values: z.infer<typeof LoginSchema>) => {
         startTransition(() => {
-            loginAction(values)
+            loginAction(values).then((data) => {
+                setError(data?.error)
+                setSuccess(data?.success)
+            })
         })
     }
 
