@@ -113,3 +113,19 @@
 
 - Resolver z login schema do logowania
 - Formy do logowania w komponencie
+
+# 24.03.2024
+
+> Rejestracja na obiadek
+
+- Dokończyłem logowanie
+- Dodałem Action do logowania
+- Zacząłem formy do rejestracji
+
+# 25.03.2024
+
+> Logowanie i Rejestracja gotowe.
+
+- Dodałem schema do rejestracji
+- Dokończyłem form do logowania
+- Action do rejestracji
