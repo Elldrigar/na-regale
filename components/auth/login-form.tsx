@@ -47,10 +47,10 @@ export const LoginForm = () => {
 
     return (
         <CardWrapper
-            header='Nazwa Aplikacji'
+            header='Nazwa Aplikacji(LOG)'
             headerLabel='Welcome back'
             backButtonLabel='test'
-            backButtonHref='test'
+            backButtonHref='register'
             showSocial>
             <Form {...form}>
                 <form
