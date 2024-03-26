@@ -129,3 +129,11 @@
 - Dodałem schema do rejestracji
 - Dokończyłem form do logowania
 - Action do rejestracji
+
+# 26.03.2024
+
+> ORM and DB
+
+- Zainstalowana Prisma
+- Zainicjowana Prisma
+- Ogarnięcie ENV i DB
