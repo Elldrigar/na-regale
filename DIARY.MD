@@ -137,3 +137,10 @@
 - Zainstalowana Prisma
 - Zainicjowana Prisma
 - Ogarnięcie ENV i DB
+
+# 27.03.2024
+
+> Zdecydowałem na chwilę obecna użyć database jako SupaBase, z PRISMA ORM
+
+- Ogarnąłem konto na supabase
+- Wygenerowałem model User-a oraz Account
