@@ -144,3 +144,10 @@
 
 - Ogarnąłem konto na supabase
 - Wygenerowałem model User-a oraz Account
+
+# 28-29.03.2024
+
+> Tworzenie oraz pobieranie usera w bazie
+
+- Utworzylem service getUser gdzie mozna pobrac by e-mail i by ID
+- Zmienilem paczke bcrypt na bcryptjs
