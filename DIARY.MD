@@ -151,3 +151,16 @@
 
 - Utworzylem service getUser gdzie mozna pobrac by e-mail i by ID
 - Zmienilem paczke bcrypt na bcryptjs
+
+# 30-03.2024
+
+> nextAuth.js to teraz Auth.js
+
+- Ziansitalowalem i skonfigurowałem auth.js pod Prisme
+- Zmieniłem matcher w configu na ten z clerk-a
+
+# 31.03.2024 / 01.04.2024
+
+> Wielkanoc, Śmingus oraz Prima Aprilis Combo!
+
+- 
