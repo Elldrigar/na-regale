@@ -164,3 +164,7 @@
 > Wielkanoc, Śmingus oraz Prima Aprilis Combo!
 
 - Mało czasu na kodowanie, ale kilka minut się znalazło na zmiany w auth config pod login przy pomocy credentilas (e-mial & pass)
+
+# 2.04.2024
+
+> Do Uzupełnienia
