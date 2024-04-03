@@ -2,8 +2,9 @@
 
 import * as z from 'zod'
 import { LoginSchema } from '@/schemas'
-import { signIn } from "@/auth";
-import {DEFAULT_LOGIN_REDIRECT} from "@/routes";
+import { signIn } from '@/auth'
+import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
+import { AuthError } from 'next-auth'
 
 export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
     const validatedFields = LoginSchema.safeParse(values)
@@ -15,10 +16,19 @@ export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
     const { email, password } = validatedFields.data
     try {
         await signIn('credentials', {
-            email, password, redirectTo: DEFAULT_LOGIN_REDIRECT
+            email,
+            password,
+            redirectTo: DEFAULT_LOGIN_REDIRECT,
         })
     } catch (err) {
-        //TODO
+        if (err instanceof AuthError) {
+            switch (err.type) {
+                case 'CredentialsSignin':
+                    return { error: 'Nieprawidłowe dane logowania!' }
+                default:
+                    return { error: 'Ups, cos poszło nie tak!' }
+            }
+        }
+        throw err
     }
-
 }
