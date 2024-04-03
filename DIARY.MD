@@ -167,4 +167,16 @@
 
 # 2.04.2024
 
-> Do Uzupełnienia
+> Zaloguj się oraz wyloguj
+
+- Dodałem button do wylogowania się po zalogowaniu
+- Logowanie przez credentiale działa poprawnie
+
+# 3.04.2024
+
+> User Role ADMIN oraz USER
+
+- Dodałem do schema role USER oraz ADMIN
+- Wyczyściłem baze oraz wypchnąłem nowe schema z role
+- Naprawiłem błąd TypeScript z role
+
