@@ -14,8 +14,9 @@ export const {
     callbacks: {
         async signIn({ user }) {
             const existingUser = await getUserById(user.id)
-
-            return !(!existingUser || !existingUser.emailVerified)
+            //
+            // return !(!existingUser || !existingUser.emailVerified)
+            return true
         },
         async session({ token, session }) {
             if (token.sub && session.user) {
