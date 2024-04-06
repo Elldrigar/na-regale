@@ -180,3 +180,21 @@
 - Wyczyściłem baze oraz wypchnąłem nowe schema z role
 - Naprawiłem błąd TypeScript z role
 
+# 4.04.2024
+
+> TypeScript
+
+- Pofixowałem problemy z typami
+
+# 5.04.2024
+
+> Github
+
+- Provioder logowania się za pomocą Githuba
+- Dodanie blokady logowania się bez potwierdzenia e-mail (chwilowa wyłączone)
+
+# 6.04.2024
+
+> Dzień poza domem
+
+- Update Diary poprzednich dni :)
