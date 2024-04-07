@@ -11,11 +11,26 @@ export const {
     signIn,
     signOut
 } = NextAuth({
+    pages: {
+        signIn: '/auth/login',
+        error: '/auth/error'
+    },
+    events: {
+        async linkAccount({ user }) {
+            await db.user.update({
+                where: { id: user.id },
+                data: { emailVerified: new Date() }
+            })
+        }
+    },
     callbacks: {
-        async signIn({ user }) {
-            const existingUser = await getUserById(user.id)
-            //
-            // return !(!existingUser || !existingUser.emailVerified)
+        async signIn({ user, account }) {
+            if (account?.provider !== 'credentials') return true // bez weryfikacji e-maila przepuszczam innych providerów
+
+            const existingUser = await getUserById(user.id as string)
+
+            if (!existingUser?.emailVerified) return false // zabezpiecza logowanie bez weryfikacji e-maila
+
             return true
         },
         async session({ token, session }) {

@@ -198,3 +198,11 @@
 > Dzień poza domem
 
 - Update Diary poprzednich dni :)
+
+# 7.04.2024
+
+> Piękny niedzielny dzionek 
+
+- Nowy schema do weryfikacji tokena
+- nowy serwis do tokenów
+- przygotowanie do wysłania e-maila
