@@ -206,3 +206,10 @@
 - Nowy schema do weryfikacji tokena
 - nowy serwis do tokenów
 - przygotowanie do wysłania e-maila
+
+# 8.04.2024
+
+> 39 Dzień wyzwania, a ja dalej się babram z logowaniem XD
+
+- Ogarnąłem resend
+- emial lib do wysyłania e-maile przez resend
