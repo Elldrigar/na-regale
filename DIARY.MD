@@ -213,3 +213,10 @@
 
 - Ogarnąłem resend
 - emial lib do wysyłania e-maile przez resend
+
+# 9.04.2024
+
+> Dzień 40, prawie półmetek....
+
+- Oganięty e-mail weryfikacyjny przy rejestracji
+- Ogarnięty e-mail weryfikacyjny przy logowaniu gdy user nie ma aktywnego konta
