@@ -5,8 +5,9 @@ import { LoginSchema } from '@/schemas'
 import { signIn } from '@/auth'
 import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
 import { AuthError } from 'next-auth'
-import { generateVerificationToken } from "@/lib/tokens";
-import {getUserByEmail} from "@/services/user/getUser";
+import { generateVerificationToken } from '@/lib/tokens'
+import { getUserByEmail } from '@/services/user/getUser'
+import { sendVerificationEmail } from '@/lib/email'
 
 export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
     const validatedFields = LoginSchema.safeParse(values)
@@ -27,6 +28,11 @@ export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
             existingUser.email
         )
 
+        await sendVerificationEmail(
+            verificationToken.email,
+            verificationToken.token
+        )
+
         return { success: 'Email do weryfikacji wysłany!' }
     }
 
@@ -34,7 +40,7 @@ export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
         await signIn('credentials', {
             email,
             password,
-            redirectTo: DEFAULT_LOGIN_REDIRECT,
+            redirectTo: DEFAULT_LOGIN_REDIRECT
         })
     } catch (err) {
         if (err instanceof AuthError) {
