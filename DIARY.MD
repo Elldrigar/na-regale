@@ -220,3 +220,11 @@
 
 - Oganięty e-mail weryfikacyjny przy rejestracji
 - Ogarnięty e-mail weryfikacyjny przy logowaniu gdy user nie ma aktywnego konta
+
+# 10.04.2024
+
+> dzień 41
+
+- organizacyjne rzeczy poza kodowe, domena na resend, lipa bo trzeba mieć z sufixem .com :(
+
+  )
