@@ -227,4 +227,14 @@
 
 - organizacyjne rzeczy poza kodowe, domena na resend, lipa bo trzeba mieć z sufixem .com :(
 
-  )
+# 11.04.2024
+
+> Dzień 42
+
+- Reset password funkcjonalność ogarnięta, jutro tylko ogarnąć jeszcze form do resetu z linka z e-maila
+
+# 12.04.2024
+
+> dzień 43, piątek, piątunio :)
+
+- Form do resetu oagrnięty, reset hasła działa poprawnie
