@@ -20,3 +20,9 @@ export const RegisterSchema = z.object({
         message: 'Imię jest wymagane'
     })
 })
+
+export const ResetSchema = z.object({
+    email: z.string().email({
+        message: 'Poprawny email jest wymagany'
+    })
+})

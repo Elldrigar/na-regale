@@ -10,7 +10,12 @@ export const publicRoutes: string[] = ['/', '/auth/new-verification']
  *Te ruty przekierują zalogowanego użytkownika do /settings
  * @type {string[]}
  */
-export const authRoutes: string[] = ['/auth/login', '/auth/register', '/auth/error']
+export const authRoutes: string[] = [
+    '/auth/login',
+    '/auth/register',
+    '/auth/error',
+    '/auth/reset',
+]
 
 /**
  * Prefix dla API authentication rutek

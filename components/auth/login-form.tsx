@@ -4,6 +4,7 @@ import * as z from 'zod'
 import { CardWrapper } from '@/components/auth/card-wrapper'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Link from "next/link";
 import { LoginSchema } from '@/schemas'
 import {
     Form,
@@ -20,6 +21,7 @@ import { FormSuccess } from '@/components/notification/form-success'
 import { loginAction } from '@/actions/login-action'
 import { useState, useTransition } from 'react'
 import { useSearchParams } from 'next/navigation'
+
 
 export const LoginForm = () => {
     const [isPending, startTransition] = useTransition()
@@ -93,6 +95,15 @@ export const LoginForm = () => {
                                             type='password'
                                         />
                                     </FormControl>
+                                    <Button
+                                        size='sm'
+                                        variant='link'
+                                        asChild
+                                        className='px-0 font-light'>
+                                        <Link href='/auth/reset'>
+                                            Zapomniałeś hasła? 😎
+                                        </Link>
+                                    </Button>
                                     <FormMessage />
                                 </FormItem>
                             )}
