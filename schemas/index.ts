@@ -26,3 +26,9 @@ export const ResetSchema = z.object({
         message: 'Poprawny email jest wymagany'
     })
 })
+
+export const NewPasswordSchema = z.object({
+    password: z.string().min(6, {
+        message: 'Minimum 6 znaków'
+    })
+})
