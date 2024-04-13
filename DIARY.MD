@@ -238,3 +238,9 @@
 > dzień 43, piątek, piątunio :)
 
 - Form do resetu oagrnięty, reset hasła działa poprawnie
+
+# 13.04.2024
+
+> Debbuging, siedzi gdzieś ten cholerny robaczek
+
+- Dzień bez nowego kodu, staram się naprawić bug-a który mi zapętla logowanie i wysłanie tokenu do weryfikacji
