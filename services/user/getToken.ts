@@ -1,4 +1,4 @@
-import {db} from '@/lib/db'
+import { db } from '@/lib/db'
 
 export const getVerificationTokenByToken = async (token: string) => {
     try {
@@ -23,7 +23,7 @@ export const getVerificationTokenByEmail = async (email: string) => {
 export const getPasswordResetTokenByToken = async (token: string) => {
     try {
         return await db.passwordResetToken.findUnique({
-            where: {token}
+            where: { token }
         })
     } catch {
         return null
@@ -33,7 +33,7 @@ export const getPasswordResetTokenByToken = async (token: string) => {
 export const getPasswordResetTokenByEmail = async (email: string) => {
     try {
         return await db.passwordResetToken.findFirst({
-            where: {email}
+            where: { email }
         })
     } catch {
         return null
@@ -43,7 +43,7 @@ export const getPasswordResetTokenByEmail = async (email: string) => {
 export const getTwoFactorTokenByToken = async (token: string) => {
     try {
         return await db.twoFactorToken.findUnique({
-            where: {token}
+            where: { token }
         })
     } catch {
         return null
@@ -53,7 +53,17 @@ export const getTwoFactorTokenByToken = async (token: string) => {
 export const getTwoFactorTokenByEmail = async (email: string) => {
     try {
         return await db.twoFactorToken.findFirst({
-            where: {email}
+            where: { email }
+        })
+    } catch {
+        return null
+    }
+}
+
+export const getTwoFactorConfirmationByUserId = async (userId: string) => {
+    try {
+        return await db.confirmation2FA.findUnique({
+            where: { userId }
         })
     } catch {
         return null
