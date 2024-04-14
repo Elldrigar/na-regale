@@ -244,3 +244,10 @@
 > Debbuging, siedzi gdzieś ten cholerny robaczek
 
 - Dzień bez nowego kodu, staram się naprawić bug-a który mi zapętla logowanie i wysłanie tokenu do weryfikacji
+
+#14.04.2024
+
+> Dzionek 45!
+
+- 2FA implementacja
+- Tokeny ogarnięte, resend też, jutro dokończę całą funkcjonalność, tym samym rejestracja i logowanie zakończone!
