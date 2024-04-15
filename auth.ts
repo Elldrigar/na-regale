@@ -3,6 +3,7 @@ import authConfig from '@/auth.config'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import { db } from '@/lib/db'
 import { getUserById } from '@/services/user/getUser'
+import { getTwoFactorConfirmationByUserId } from '@/services/user/getToken'
 import { UserRole } from '@prisma/client'
 
 export const {
@@ -30,6 +31,17 @@ export const {
             const existingUser = await getUserById(user.id as string)
 
             if (!existingUser?.emailVerified) return false // zabezpiecza logowanie bez weryfikacji e-maila
+
+            if (existingUser.is2FAEnabled) {
+                const twoFactorConfirmation =
+                    await getTwoFactorConfirmationByUserId(existingUser.id)
+
+                if (!twoFactorConfirmation) return false
+
+                await db.confirmation2FA.delete({
+                    where: { id: twoFactorConfirmation.id }
+                })
+            }
 
             return true
         },
