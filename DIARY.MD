@@ -251,3 +251,11 @@
 
 - 2FA implementacja
 - Tokeny ogarnięte, resend też, jutro dokończę całą funkcjonalność, tym samym rejestracja i logowanie zakończone!
+
+# 15.04.2024
+
+> 46 Dzionek, całe flow logowania/rejestrowania zakończone?
+
+- 2FA zakonczone
+- Jednak podczas testów, mam problem z walidacją passworda przed wysłaniem kodu 2FA, kod sie wysyła nawet przy błędnym haśle!
+- Wiec jutro ostatnie szlify i poprawki...
