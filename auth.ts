@@ -37,6 +37,10 @@ export const {
                     await getTwoFactorConfirmationByUserId(existingUser.id)
 
                 if (!twoFactorConfirmation) return false
+
+                await db.confirmation2FA.delete({
+                    where: { id: twoFactorConfirmation.id }
+                })
             }
 
             return true
