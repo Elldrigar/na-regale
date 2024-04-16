@@ -6,6 +6,7 @@ import { LoginSchema } from '@/schemas'
 import { signIn } from '@/auth'
 import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
 import { AuthError } from 'next-auth'
+import bcrypt from 'bcryptjs'
 import { generateVerificationToken, generateTwoFactorToken } from '@/lib/tokens'
 import {
     getTwoFactorTokenByEmail,
@@ -26,6 +27,11 @@ export const loginAction = async (values: z.infer<typeof LoginSchema>) => {
 
     if (!existingUser || !existingUser.email || !existingUser.password) {
         return { error: 'Użytkownik nie istnieje!' }
+    }
+
+    const decodePassword = await bcrypt.compare(password, existingUser.password)
+    if (!decodePassword) {
+        return { error: 'Hasło nie prawidłowe!' }
     }
 
     if (!existingUser.emailVerified) {
