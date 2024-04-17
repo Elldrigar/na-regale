@@ -259,3 +259,9 @@
 - 2FA zakonczone
 - Jednak podczas testów, mam problem z walidacją passworda przed wysłaniem kodu 2FA, kod sie wysyła nawet przy błędnym haśle!
 - Wiec jutro ostatnie szlify i poprawki...
+
+# 16.04.2024
+
+> Dzień 47, totalnie brak siły
+
+- Utworzyłęm action do wylogowania przy use server
