@@ -245,7 +245,7 @@
 
 - Dzień bez nowego kodu, staram się naprawić bug-a który mi zapętla logowanie i wysłanie tokenu do weryfikacji
 
-#14.04.2024
+# 14.04.2024
 
 > Dzionek 45!
 
@@ -265,3 +265,9 @@
 > Dzień 47, totalnie brak siły
 
 - Utworzyłęm action do wylogowania przy use server
+
+# 18.04.2024
+
+> Dzień 49 wyzwania 100 commitów, prawie półmetek, a aplikacja w powijakach XD
+
+- Czas na use client, i budowanie menu settings po zalogowaniu
