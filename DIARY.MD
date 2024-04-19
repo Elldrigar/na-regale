@@ -271,3 +271,9 @@
 > Dzień 49 wyzwania 100 commitów, prawie półmetek, a aplikacja w powijakach XD
 
 - Czas na use client, i budowanie menu settings po zalogowaniu
+
+# 19.04.2024
+
+> Dzień 50! PÓŁMETEK! Masakra!
+
+- Zaczynam layout strony, navbar na początek
