@@ -277,3 +277,10 @@
 > Dzień 50! PÓŁMETEK! Masakra!
 
 - Zaczynam layout strony, navbar na początek
+
+# 20.04.2024
+
+> Dzień 51, sobota
+
+- Do uzupełnienia
+- 
