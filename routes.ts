@@ -29,4 +29,4 @@ export const apiAuthPrefix: string = '/api/auth'
  * Defaultowa rutka po zalogowaniu się
  * @type {string}
  */
-export const DEFAULT_LOGIN_REDIRECT: string = '/settings'
+export const DEFAULT_LOGIN_REDIRECT: string = '/start'
