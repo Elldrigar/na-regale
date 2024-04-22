@@ -282,5 +282,16 @@
 
 > Dzień 51, sobota
 
-- Do uzupełnienia
-- 
+- Do uzupełnienia, praca przy layout
+
+# 21.04.2024
+
+> Dzień 52, niedziela
+
+- Dodałem dropdownmenu, z profile oraz settigami, ale na razie nie aktywne, 
+
+# 22.04.2024
+
+> Dzień 53, poniedziałek
+
+- Potworzyłem page pod każde menu.

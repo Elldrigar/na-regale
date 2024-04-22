@@ -18,7 +18,7 @@ export const Navbar = () => {
                 <Button
                     asChild
                     variant={pathName === '/ai' ? 'default' : 'outline'}>
-                    <Link href='/ai'>AI Mów</Link>
+                    <Link href='/ai'>Czyt<span className='text-fuchsia-700 font-bold'>AI</span></Link>
                 </Button>
                 <Button
                     asChild
