@@ -301,3 +301,10 @@
 > Dzień 54, zostało 198 uczestników z 466
 
 - Nic
+
+# 24.04.2024
+
+> Dzień 55, zacząć czas tworzyć model i schema pod best practices
+
+- Prisma schema dla kategori oraz postów
+- API GET dla kategorii
