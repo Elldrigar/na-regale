@@ -24,6 +24,7 @@ model User {
   accounts        Account[]
   is2FAEnabled    Boolean          @default(false)
   confirmation2FA Confirmation2FA?
+  Post            Post[]
 }
 
 model Account {
@@ -79,4 +80,23 @@ model Confirmation2FA {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId])
+}
+
+model Category {
+  id    String @id @default(cuid())
+  slug  String @unique
+  title String
+  Posts Post[]
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  desc      String
+  views     Int      @default(0)
+  catSlug   String
+  cat       Category @relation(fields: [catSlug], references: [slug])
+  userEmail String
+  user      User     @relation(fields: [userEmail], references: [email])
 }
