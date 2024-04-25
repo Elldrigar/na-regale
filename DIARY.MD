@@ -308,3 +308,9 @@
 
 - Prisma schema dla kategori oraz postów
 - API GET dla kategorii
+
+# 25.04.2024
+
+> Dzień 56, łóżko i research
+
+- Co za pogoda, choróbsko rozkłada...
