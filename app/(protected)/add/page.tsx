@@ -1,10 +1,11 @@
-'use client'
+import { currentUser } from '@/lib/auth'
 
-const add = () => {
-
+const add = async () => {
+    const user = await currentUser()
     return (
         <div>
             <h1>DODAJ PAGE</h1>
+            <h2>{JSON.stringify(user)}</h2>
         </div>
     )
 }
