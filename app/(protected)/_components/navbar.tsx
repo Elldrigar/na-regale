@@ -8,7 +8,7 @@ import { UserButton } from '@/components/auth/user-button'
 export const Navbar = () => {
     const pathName = usePathname()
     return (
-        <nav className='flex w-[800px] justify-between rounded-xl bg-secondary p-4 shadow-xl'>
+        <nav className='flex w-[1000px] justify-between rounded-xl bg-secondary p-4 shadow-xl'>
             <div className='flex gap-x-2'>
                 <Button
                     asChild
