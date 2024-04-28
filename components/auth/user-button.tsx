@@ -13,6 +13,8 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { useCurrentUser } from '@/hooks/use-current-user'
 import { LogoutButton } from '@/components/auth/logout-button'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export const UserButton = () => {
     const user = useCurrentUser()
@@ -30,7 +32,9 @@ export const UserButton = () => {
             <DropdownMenuContent className='w-40' align='end'>
                 <DropdownMenuLabel>Moje Konto</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem disabled>Profil</DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Link href='/profile'>Profil</Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem disabled>Ustawienia</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <LogoutButton>
