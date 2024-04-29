@@ -320,3 +320,9 @@
 > Dzień 57
 
 - Do uzupełnienia
+
+# 29.04.2024
+
+> Dzień 60, Profile user
+
+- component użytkownika
