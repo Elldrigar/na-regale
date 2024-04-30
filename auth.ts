@@ -52,6 +52,9 @@ export const {
             if (token.role && session.user) {
                 session.user.role = token.role as UserRole
             }
+            if (session.user) {
+                session.user.is2FAEnabled = token.is2FAEnabled as boolean
+            }
             return session
         },
         async jwt({ token }) {
