@@ -65,6 +65,7 @@ export const {
             if (!existingUser) return token
 
             token.role = existingUser.role
+            token.is2FAEnabled = existingUser.is2FAEnabled
             return token
         }
     },
