@@ -326,3 +326,9 @@
 > Dzień 60, Profile user
 
 - component użytkownika
+
+# 1.05.2024
+
+> Dzień 62,
+
+- Profil użytkownika done
