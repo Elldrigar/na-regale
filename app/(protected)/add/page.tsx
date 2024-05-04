@@ -5,6 +5,7 @@ import { RoleGate } from '@/components/auth/role-gate'
 import { FormSuccess } from '@/components/notification/form-success'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
+import { adminActions } from '@/actions/admin-action'
 
 const add = () => {
     const onApiRouteClick = () => {
@@ -13,6 +14,17 @@ const add = () => {
                 toast.success('Masz dostęp!')
             } else {
                 toast.error('Brak dostepu')
+            }
+        })
+    }
+
+    const onServerActionClick = () => {
+        adminActions().then((data) => {
+            if (data.error) {
+                toast.error(data.error)
+            }
+            if (data.succes) {
+                toast.success(data.succes)
             }
         })
     }
@@ -27,7 +39,8 @@ const add = () => {
                 <FormSuccess message='Jesteś Adminem! Enjoy the power!' />
             </RoleGate>
 
-            <Button onClick={onApiRouteClick}>Testuj</Button>
+            <Button onClick={onApiRouteClick}>Testuj API</Button>
+            <Button onClick={onServerActionClick}>Testuj Server action</Button>
         </div>
     )
 }
