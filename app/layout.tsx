@@ -3,6 +3,7 @@ import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import { SessionProvider } from 'next-auth/react'
 import { auth } from '@/auth'
+import { Toaster } from '@/components/ui/sonner'
 
 const font = Montserrat({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default async function RootLayout({
     return (
         <SessionProvider session={session}>
             <html lang='en'>
+                <Toaster position='top-center' richColors/>
                 <body className={font.className}>{children}</body>
             </html>
         </SessionProvider>

@@ -4,14 +4,15 @@ import { UserRole } from '@prisma/client'
 import { RoleGate } from '@/components/auth/role-gate'
 import { FormSuccess } from '@/components/notification/form-success'
 import { Button } from '@/components/ui/button'
+import { toast } from 'sonner'
 
 const add = () => {
     const onApiRouteClick = () => {
         fetch('/api/admin').then((response) => {
             if (response.ok) {
-                console.log('OK')
+                toast.success('Masz dostęp!')
             } else {
-                console.error('ZABRONIONE!')
+                toast.error('Brak dostepu')
             }
         })
     }
