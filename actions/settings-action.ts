@@ -14,4 +14,19 @@ export const settingsAction = async (
     if (!user) {
         return { error: 'Brak autoryzacji' }
     }
+
+    const dbUser = await getUserById(user.id)
+
+    if (!dbUser) {
+        return { error: "'Brak autoryzacji" }
+    }
+
+    await db.user.update({
+        where: { id: dbUser.id },
+        data: {
+            ...values
+        }
+    })
+
+    return { success: 'Ustawienia zaktualizowane!' }
 }
