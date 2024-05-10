@@ -54,7 +54,27 @@ const settings = () => {
                 <Form {...form}>
                     <form
                         className='space-y-6'
-                        onSubmit={form.handleSubmit(onSubmit)}></form>
+                        onSubmit={form.handleSubmit(onSubmit)}>
+                        <div>
+                            <FormField
+                                control={form.control}
+                                name='name'
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Imię</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                {...field}
+                                                placeholder='Imię'
+                                                disabled={isPending}
+                                            />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+                        </div>
+                        <Button type='submit'>Update!</Button>
+                    </form>
                 </Form>
             </CardContent>
         </Card>
