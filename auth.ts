@@ -5,6 +5,7 @@ import { db } from '@/lib/db'
 import { getUserById } from '@/services/user/getUser'
 import { getTwoFactorConfirmationByUserId } from '@/services/user/getToken'
 import { UserRole } from '@prisma/client'
+import { getAccountByUserId } from '@/services/user/getAccount'
 
 export const {
     handlers: { GET, POST },
@@ -54,7 +55,8 @@ export const {
             }
             if (session.user) {
                 session.user.name = token.name
-                session.user.email = token.email
+                session.user.email = token.email as string
+                session.user.isOAuth = token.isOAuth as boolean
                 session.user.is2FAEnabled = token.is2FAEnabled as boolean
             }
             return session
@@ -66,6 +68,9 @@ export const {
 
             if (!existingUser) return token
 
+            const existingAccount = await getAccountByUserId(existingUser.id)
+
+            token.isOAuth = !!existingAccount
             token.name = existingUser.name
             token.email = existingUser.email
             token.role = existingUser.role
