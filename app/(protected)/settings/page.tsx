@@ -55,7 +55,7 @@ const Settings = () => {
             <CardContent>
                 <Form {...form}>
                     <form
-                        className='space-y-6'
+                        className='space-y-6 test'
                         onSubmit={form.handleSubmit(onSubmit)}>
                         <div className='space-y-4'>
                             <FormField
