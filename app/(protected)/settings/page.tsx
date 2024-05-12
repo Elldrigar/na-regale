@@ -18,7 +18,9 @@ import {
     FormDescription,
     FormMessage
 } from '@/components/ui/form'
-import {useCurrentUser} from "@/hooks/use-current-user";
+import { useCurrentUser } from '@/hooks/use-current-user'
+import { FormSuccess } from '@/components/notification/form-success'
+import { FormError } from '@/components/notification/form-error'
 
 const Settings = () => {
     const user = useCurrentUser()
@@ -55,7 +57,7 @@ const Settings = () => {
             <CardContent>
                 <Form {...form}>
                     <form
-                        className='space-y-6 test'
+                        className='test space-y-6'
                         onSubmit={form.handleSubmit(onSubmit)}>
                         <div className='space-y-4'>
                             <FormField
@@ -75,6 +77,8 @@ const Settings = () => {
                                 )}
                             />
                         </div>
+                        <FormSuccess message={error} />
+                        <FormError message={success}/>
                         <Button type='submit'>Update!</Button>
                     </form>
                 </Form>
