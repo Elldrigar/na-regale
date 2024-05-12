@@ -18,15 +18,17 @@ import {
     FormDescription,
     FormMessage
 } from '@/components/ui/form'
+import {useCurrentUser} from "@/hooks/use-current-user";
 
-const settings = () => {
+const Settings = () => {
+    const user = useCurrentUser()
     const [success, setSuccess] = useState<string | undefined>()
     const [error, setError] = useState<string | undefined>()
     const [isPending, startTransition] = useTransition()
     const form = useForm<z.infer<typeof SettingsSchema>>({
         resolver: zodResolver(SettingsSchema),
         defaultValues: {
-            name: ''
+            name: user?.name || undefined
         }
     })
 
@@ -55,7 +57,7 @@ const settings = () => {
                     <form
                         className='space-y-6'
                         onSubmit={form.handleSubmit(onSubmit)}>
-                        <div>
+                        <div className='space-y-4'>
                             <FormField
                                 control={form.control}
                                 name='name'
@@ -81,4 +83,4 @@ const settings = () => {
     )
 }
 
-export default settings
+export default Settings
