@@ -77,8 +77,8 @@ const Settings = () => {
                                 )}
                             />
                         </div>
-                        <FormSuccess message={error} />
-                        <FormError message={success}/>
+                        <FormSuccess message={success} />
+                        <FormError message={error}/>
                         <Button type='submit'>Update!</Button>
                     </form>
                 </Form>
