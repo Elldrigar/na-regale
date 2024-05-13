@@ -79,7 +79,7 @@ const Settings = () => {
                         </div>
                         <FormSuccess message={success} />
                         <FormError message={error}/>
-                        <Button type='submit'>Update!</Button>
+                        <Button disabled={isPending} type='submit'>Update!</Button>
                     </form>
                 </Form>
             </CardContent>
