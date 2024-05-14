@@ -30,7 +30,8 @@ const Settings = () => {
     const form = useForm<z.infer<typeof SettingsSchema>>({
         resolver: zodResolver(SettingsSchema),
         defaultValues: {
-            name: user?.name || undefined
+            name: user?.name || undefined,
+            email: user?.email || undefined
         }
     })
 
@@ -76,10 +77,29 @@ const Settings = () => {
                                     </FormItem>
                                 )}
                             />
+                            <FormField
+                                control={form.control}
+                                name='email'
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>E-Mail</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                {...field}
+                                                placeholder='E-Mail'
+                                                type='email'
+                                                disabled={isPending}
+                                            />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
                         </div>
                         <FormSuccess message={success} />
-                        <FormError message={error}/>
-                        <Button disabled={isPending} type='submit'>Update!</Button>
+                        <FormError message={error} />
+                        <Button disabled={isPending} type='submit'>
+                            Update!
+                        </Button>
                     </form>
                 </Form>
             </CardContent>
