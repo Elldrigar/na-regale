@@ -33,6 +33,7 @@ const Settings = () => {
             name: user?.name || undefined,
             email: user?.email || undefined,
             password: undefined,
+            newPassword: undefined,
         }
     })
 
@@ -101,6 +102,23 @@ const Settings = () => {
                                 render={({ field }) => (
                                     <FormItem>
                                         <FormLabel>Password</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                {...field}
+                                                placeholder='******'
+                                                type='password'
+                                                disabled={isPending}
+                                            />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name='newPassword'
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>New Password</FormLabel>
                                         <FormControl>
                                             <Input
                                                 {...field}
