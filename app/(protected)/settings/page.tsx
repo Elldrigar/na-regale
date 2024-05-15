@@ -21,6 +21,14 @@ import {
 import { useCurrentUser } from '@/hooks/use-current-user'
 import { FormSuccess } from '@/components/notification/form-success'
 import { FormError } from '@/components/notification/form-error'
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectValue,
+    SelectTrigger
+} from '@/components/ui/select'
+import {UserRole} from "@prisma/client";
 
 const Settings = () => {
     const user = useCurrentUser()
@@ -34,6 +42,7 @@ const Settings = () => {
             email: user?.email || undefined,
             password: undefined,
             newPassword: undefined,
+            role: user?.role || undefined,
         }
     })
 
@@ -127,6 +136,36 @@ const Settings = () => {
                                                 disabled={isPending}
                                             />
                                         </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                name='role'
+                                control={form.control}
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Rola</FormLabel>
+                                        <Select
+                                            disabled={isPending}
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}>
+                                            <FormControl>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder='Wybierz Role' />
+                                                </SelectTrigger>
+                                            </FormControl>
+                                            <SelectContent>
+                                                <SelectItem
+                                                    value={UserRole.ADMIN}>
+                                                    Admin
+                                                </SelectItem>
+                                                <SelectItem
+                                                    value={UserRole.USER}>
+                                                    User
+                                                </SelectItem>
+                                            </SelectContent>
+                                        </Select>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
