@@ -37,12 +37,20 @@ export const NewPasswordSchema = z.object({
 
 export const SettingsSchema = z
     .object({
-        name: z.optional(z.string()),
-        email: z.optional(z.string()),
+        name: z.optional(z.string().min(2, {
+            message: 'Minimum 2 znaki!'
+        })),
+        email: z.optional(z.string().email({
+            message: 'Poprawny email jest wymagany!'
+        })),
         is2FAEnabled: z.optional(z.boolean()),
         role: z.enum([UserRole.ADMIN, UserRole.USER]),
-        password: z.optional(z.string().min(6)),
-        newPassword: z.optional(z.string().min(6))
+        password: z.optional(z.string().min(6, {
+            message: '6 znaków min!'
+        })),
+        newPassword: z.optional(z.string().min(6, {
+            message: 'New Password to tez 6 znaków min'
+        }))
     })
     .refine(
         (data) => {
