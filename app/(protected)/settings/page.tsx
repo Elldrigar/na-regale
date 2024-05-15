@@ -85,6 +85,7 @@ const Settings = () => {
                                                 disabled={isPending}
                                             />
                                         </FormControl>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
@@ -102,6 +103,7 @@ const Settings = () => {
                                                 disabled={isPending}
                                             />
                                         </FormControl>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
@@ -119,6 +121,7 @@ const Settings = () => {
                                                 disabled={isPending}
                                             />
                                         </FormControl>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
@@ -136,6 +139,7 @@ const Settings = () => {
                                                 disabled={isPending}
                                             />
                                         </FormControl>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
