@@ -20,6 +20,12 @@ export const settingsAction = async (
     if (!dbUser) {
         return { error: "'Brak autoryzacji" }
     }
+    if (user.isOAuth) {
+        values.email = undefined
+        values.password = undefined
+        values.newPassword = undefined
+        values.is2FAEnabled = undefined
+    }
 
     await db.user.update({
         where: { id: dbUser.id },
