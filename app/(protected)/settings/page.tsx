@@ -28,7 +28,8 @@ import {
     SelectValue,
     SelectTrigger
 } from '@/components/ui/select'
-import {UserRole} from "@prisma/client";
+import { UserRole } from '@prisma/client'
+import { Switch } from '@/components/ui/switch'
 
 const Settings = () => {
     const user = useCurrentUser()
@@ -42,7 +43,7 @@ const Settings = () => {
             email: user?.email || undefined,
             password: undefined,
             newPassword: undefined,
-            role: user?.role || undefined,
+            role: user?.role || undefined
         }
     })
 
@@ -170,6 +171,29 @@ const Settings = () => {
                                             </SelectContent>
                                         </Select>
                                         <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                name='is2FAEnabled'
+                                control={form.control}
+                                render={({ field }) => (
+                                    <FormItem className='flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm'>
+                                        <div className='space-y-0.5'>
+                                            <FormLabel>
+                                                Two Factor Authentication
+                                            </FormLabel>
+                                            <FormDescription>
+                                                Włacz 2FA na swoim koncie
+                                            </FormDescription>
+                                        </div>
+                                        <FormControl>
+                                            <Switch
+                                                disabled={isPending}
+                                                checked={field.value}
+                                                onCheckedChange={field.onChange}
+                                            />
+                                        </FormControl>
                                     </FormItem>
                                 )}
                             />
