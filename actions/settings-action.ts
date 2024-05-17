@@ -7,6 +7,7 @@ import { getUserByEmail, getUserById } from '@/services/user/getUser'
 import { currentUser } from '@/lib/auth'
 import { generateVerificationToken } from '@/lib/tokens'
 import { sendVerificationEmail } from '@/lib/email'
+import bcrypt from 'bcryptjs'
 
 export const settingsAction = async (
     values: z.infer<typeof SettingsSchema>
@@ -43,6 +44,21 @@ export const settingsAction = async (
         )
 
         return { success: `Email weryfikacyjny wsyłany do ${values.email}` }
+    }
+
+    if (values.password && values.newPassword && dbUser.password) {
+        const passwordsMatch = await bcrypt.compare(
+            values.password,
+            dbUser.password
+        )
+
+        if (!passwordsMatch) {
+            return { error: 'Nieprawidłowe hasło!' }
+        }
+
+        const hashedPassword = await bcrypt.hash(values.newPassword, 10)
+        values.password = hashedPassword
+        values.newPassword = undefined
     }
 
     await db.user.update({
