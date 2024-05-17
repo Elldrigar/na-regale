@@ -3,8 +3,10 @@
 import * as z from 'zod'
 import { db } from '@/lib/db'
 import { SettingsSchema } from '@/schemas'
-import { getUserById } from '@/services/user/getUser'
+import { getUserByEmail, getUserById } from '@/services/user/getUser'
 import { currentUser } from '@/lib/auth'
+import { generateVerificationToken } from '@/lib/tokens'
+import { sendVerificationEmail } from '@/lib/email'
 
 export const settingsAction = async (
     values: z.infer<typeof SettingsSchema>
@@ -25,6 +27,22 @@ export const settingsAction = async (
         values.password = undefined
         values.newPassword = undefined
         values.is2FAEnabled = undefined
+    }
+
+    if (values.email && values.email !== user.email) {
+        const existingUser = await getUserByEmail(values.email)
+
+        if (existingUser && existingUser.id !== user.id) {
+            return { error: 'E-mail jest zajęty!' }
+        }
+
+        const verificationToken = await generateVerificationToken(values.email)
+        await sendVerificationEmail(
+            verificationToken.email,
+            verificationToken.token
+        )
+
+        return { success: `Email weryfikacyjny wsyłany do ${values.email}` }
     }
 
     await db.user.update({
