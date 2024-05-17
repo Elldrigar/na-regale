@@ -43,7 +43,8 @@ const Settings = () => {
             email: user?.email || undefined,
             password: undefined,
             newPassword: undefined,
-            role: user?.role || undefined
+            role: user?.role || undefined,
+            is2FAEnabled: user?.is2FAEnabled || undefined
         }
     })
 
