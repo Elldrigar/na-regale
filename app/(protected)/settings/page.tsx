@@ -30,8 +30,10 @@ import {
 } from '@/components/ui/select'
 import { UserRole } from '@prisma/client'
 import { Switch } from '@/components/ui/switch'
+import { useSession } from 'next-auth/react'
 
 const Settings = () => {
+    const { update } = useSession()
     const user = useCurrentUser()
     const [success, setSuccess] = useState<string | undefined>()
     const [error, setError] = useState<string | undefined>()
@@ -52,10 +54,12 @@ const Settings = () => {
         startTransition(() => {
             settingsAction(values)
                 .then((data) => {
+
                     if (data.error) {
                         setError(data.error)
                     }
                     if (data.success) {
+                        update()
                         setSuccess(data.success)
                     }
                 })
