@@ -3,13 +3,13 @@ import Credentials from '@auth/core/providers/credentials'
 import { LoginSchema } from '@/schemas'
 import bcrypt from 'bcryptjs'
 import { getUserByEmail } from '@/services/user/getUser'
-import GitHub from "next-auth/providers/github";
+import GitHub from 'next-auth/providers/github'
 
 export default {
     providers: [
         GitHub({
             clientId: process.env.GITHUB_ID,
-            clientSecret: process.env.GITHUB_SECRET,
+            clientSecret: process.env.GITHUB_SECRET
         }),
         Credentials({
             async authorize(credentials) {

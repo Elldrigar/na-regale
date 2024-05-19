@@ -1,7 +1,6 @@
 'use client'
 
 const browse = () => {
-
     return (
         <div>
             <h1>PRZEGLĄDAJ PAGE</h1>

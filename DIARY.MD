@@ -83,252 +83,252 @@
 
 > Reset, totalny reset, zaczynam od zera :D
 
-- Usunąłem wszystkie poprzednie pliki z projektu
-- Zainstalowałem do nowa Next.js-a, shadcn, prettiera itd.
+-   Usunąłem wszystkie poprzednie pliki z projektu
+-   Zainstalowałem do nowa Next.js-a, shadcn, prettiera itd.
 
 # 20.03.2024
 
 > Nowy początek i od razu lepiej
 
-- Landing page który mi się podoba
-- Dodany button "zacznij tutaj", który przenosi do logowania
-- Do readme dodałem screen
+-   Landing page który mi się podoba
+-   Dodany button "zacznij tutaj", który przenosi do logowania
+-   Do readme dodałem screen
 
 # 21.03.2024
 
 > Kilka dni nad auth posiedzę na pewno...
 
-- Dodane komopnenty do logowania
-- Komponenty na logowanie przez sociale
+-   Dodane komopnenty do logowania
+-   Komponenty na logowanie przez sociale
 
 # 22.03.2024
 
 > Do walidacji inputów użyję ZOD-a
 
-- Dodałem pierwszy schema do logowania
+-   Dodałem pierwszy schema do logowania
 
 # 23.03.2024
 
 > Logowanie na śniadanie
 
-- Resolver z login schema do logowania
-- Formy do logowania w komponencie
+-   Resolver z login schema do logowania
+-   Formy do logowania w komponencie
 
 # 24.03.2024
 
 > Rejestracja na obiadek
 
-- Dokończyłem logowanie
-- Dodałem Action do logowania
-- Zacząłem formy do rejestracji
+-   Dokończyłem logowanie
+-   Dodałem Action do logowania
+-   Zacząłem formy do rejestracji
 
 # 25.03.2024
 
 > Logowanie i Rejestracja gotowe.
 
-- Dodałem schema do rejestracji
-- Dokończyłem form do logowania
-- Action do rejestracji
+-   Dodałem schema do rejestracji
+-   Dokończyłem form do logowania
+-   Action do rejestracji
 
 # 26.03.2024
 
 > ORM and DB
 
-- Zainstalowana Prisma
-- Zainicjowana Prisma
-- Ogarnięcie ENV i DB
+-   Zainstalowana Prisma
+-   Zainicjowana Prisma
+-   Ogarnięcie ENV i DB
 
 # 27.03.2024
 
 > Zdecydowałem na chwilę obecna użyć database jako SupaBase, z PRISMA ORM
 
-- Ogarnąłem konto na supabase
-- Wygenerowałem model User-a oraz Account
+-   Ogarnąłem konto na supabase
+-   Wygenerowałem model User-a oraz Account
 
 # 28-29.03.2024
 
 > Tworzenie oraz pobieranie usera w bazie
 
-- Utworzylem service getUser gdzie mozna pobrac by e-mail i by ID
-- Zmienilem paczke bcrypt na bcryptjs
+-   Utworzylem service getUser gdzie mozna pobrac by e-mail i by ID
+-   Zmienilem paczke bcrypt na bcryptjs
 
 # 30-03.2024
 
 > nextAuth.js to teraz Auth.js
 
-- Ziansitalowalem i skonfigurowałem auth.js pod Prisme
-- Zmieniłem matcher w configu na ten z clerk-a
+-   Ziansitalowalem i skonfigurowałem auth.js pod Prisme
+-   Zmieniłem matcher w configu na ten z clerk-a
 
 # 31.03.2024 / 01.04.2024
 
 > Wielkanoc, Śmingus oraz Prima Aprilis Combo!
 
-- Mało czasu na kodowanie, ale kilka minut się znalazło na zmiany w auth config pod login przy pomocy credentilas (e-mial & pass)
+-   Mało czasu na kodowanie, ale kilka minut się znalazło na zmiany w auth config pod login przy pomocy credentilas (e-mial & pass)
 
 # 2.04.2024
 
 > Zaloguj się oraz wyloguj
 
-- Dodałem button do wylogowania się po zalogowaniu
-- Logowanie przez credentiale działa poprawnie
+-   Dodałem button do wylogowania się po zalogowaniu
+-   Logowanie przez credentiale działa poprawnie
 
 # 3.04.2024
 
 > User Role ADMIN oraz USER
 
-- Dodałem do schema role USER oraz ADMIN
-- Wyczyściłem baze oraz wypchnąłem nowe schema z role
-- Naprawiłem błąd TypeScript z role
+-   Dodałem do schema role USER oraz ADMIN
+-   Wyczyściłem baze oraz wypchnąłem nowe schema z role
+-   Naprawiłem błąd TypeScript z role
 
 # 4.04.2024
 
 > TypeScript
 
-- Pofixowałem problemy z typami
+-   Pofixowałem problemy z typami
 
 # 5.04.2024
 
 > Github
 
-- Provioder logowania się za pomocą Githuba
-- Dodanie blokady logowania się bez potwierdzenia e-mail (chwilowa wyłączone)
+-   Provioder logowania się za pomocą Githuba
+-   Dodanie blokady logowania się bez potwierdzenia e-mail (chwilowa wyłączone)
 
 # 6.04.2024
 
 > Dzień poza domem
 
-- Update Diary poprzednich dni :)
+-   Update Diary poprzednich dni :)
 
 # 7.04.2024
 
-> Piękny niedzielny dzionek 
+> Piękny niedzielny dzionek
 
-- Nowy schema do weryfikacji tokena
-- nowy serwis do tokenów
-- przygotowanie do wysłania e-maila
+-   Nowy schema do weryfikacji tokena
+-   nowy serwis do tokenów
+-   przygotowanie do wysłania e-maila
 
 # 8.04.2024
 
 > 39 Dzień wyzwania, a ja dalej się babram z logowaniem XD
 
-- Ogarnąłem resend
-- emial lib do wysyłania e-maile przez resend
+-   Ogarnąłem resend
+-   emial lib do wysyłania e-maile przez resend
 
 # 9.04.2024
 
 > Dzień 40, prawie półmetek....
 
-- Oganięty e-mail weryfikacyjny przy rejestracji
-- Ogarnięty e-mail weryfikacyjny przy logowaniu gdy user nie ma aktywnego konta
+-   Oganięty e-mail weryfikacyjny przy rejestracji
+-   Ogarnięty e-mail weryfikacyjny przy logowaniu gdy user nie ma aktywnego konta
 
 # 10.04.2024
 
 > dzień 41
 
-- organizacyjne rzeczy poza kodowe, domena na resend, lipa bo trzeba mieć z sufixem .com :(
+-   organizacyjne rzeczy poza kodowe, domena na resend, lipa bo trzeba mieć z sufixem .com :(
 
 # 11.04.2024
 
 > Dzień 42
 
-- Reset password funkcjonalność ogarnięta, jutro tylko ogarnąć jeszcze form do resetu z linka z e-maila
+-   Reset password funkcjonalność ogarnięta, jutro tylko ogarnąć jeszcze form do resetu z linka z e-maila
 
 # 12.04.2024
 
 > dzień 43, piątek, piątunio :)
 
-- Form do resetu oagrnięty, reset hasła działa poprawnie
+-   Form do resetu oagrnięty, reset hasła działa poprawnie
 
 # 13.04.2024
 
 > Debbuging, siedzi gdzieś ten cholerny robaczek
 
-- Dzień bez nowego kodu, staram się naprawić bug-a który mi zapętla logowanie i wysłanie tokenu do weryfikacji
+-   Dzień bez nowego kodu, staram się naprawić bug-a który mi zapętla logowanie i wysłanie tokenu do weryfikacji
 
 # 14.04.2024
 
 > Dzionek 45!
 
-- 2FA implementacja
-- Tokeny ogarnięte, resend też, jutro dokończę całą funkcjonalność, tym samym rejestracja i logowanie zakończone!
+-   2FA implementacja
+-   Tokeny ogarnięte, resend też, jutro dokończę całą funkcjonalność, tym samym rejestracja i logowanie zakończone!
 
 # 15.04.2024
 
 > 46 Dzionek, całe flow logowania/rejestrowania zakończone?
 
-- 2FA zakonczone
-- Jednak podczas testów, mam problem z walidacją passworda przed wysłaniem kodu 2FA, kod sie wysyła nawet przy błędnym haśle!
-- Wiec jutro ostatnie szlify i poprawki...
+-   2FA zakonczone
+-   Jednak podczas testów, mam problem z walidacją passworda przed wysłaniem kodu 2FA, kod sie wysyła nawet przy błędnym haśle!
+-   Wiec jutro ostatnie szlify i poprawki...
 
 # 16.04.2024
 
 > Dzień 47, totalnie brak siły
 
-- Utworzyłęm action do wylogowania przy use server
+-   Utworzyłęm action do wylogowania przy use server
 
 # 18.04.2024
 
 > Dzień 49 wyzwania 100 commitów, prawie półmetek, a aplikacja w powijakach XD
 
-- Czas na use client, i budowanie menu settings po zalogowaniu
+-   Czas na use client, i budowanie menu settings po zalogowaniu
 
 # 19.04.2024
 
 > Dzień 50! PÓŁMETEK! Masakra!
 
-- Zaczynam layout strony, navbar na początek
+-   Zaczynam layout strony, navbar na początek
 
 # 20.04.2024
 
 > Dzień 51, sobota
 
-- Do uzupełnienia, praca przy layout
+-   Do uzupełnienia, praca przy layout
 
 # 21.04.2024
 
 > Dzień 52, niedziela
 
-- Dodałem dropdownmenu, z profile oraz settigami, ale na razie nie aktywne, 
+-   Dodałem dropdownmenu, z profile oraz settigami, ale na razie nie aktywne,
 
 # 22.04.2024
 
 > Dzień 53, poniedziałek
 
-- Potworzyłem page pod każde menu.
+-   Potworzyłem page pod każde menu.
 
 # 23.04.2024
 
 > Dzień 54, zostało 198 uczestników z 466
 
-- Nic
+-   Nic
 
 # 24.04.2024
 
 > Dzień 55, zacząć czas tworzyć model i schema pod best practices
 
-- Prisma schema dla kategori oraz postów
-- API GET dla kategorii
+-   Prisma schema dla kategori oraz postów
+-   API GET dla kategorii
 
 # 25.04.2024
 
 > Dzień 56, łóżko i research
 
-- Co za pogoda, choróbsko rozkłada...
+-   Co za pogoda, choróbsko rozkłada...
 
 # 26.04.2024
 
 > Dzień 57
 
-- Do uzupełnienia
+-   Do uzupełnienia
 
 # 29.04.2024
 
 > Dzień 60, Profile user
 
-- component użytkownika
+-   component użytkownika
 
 # 1.05.2024
 
 > Dzień 62,
 
-- Profil użytkownika done
+-   Profil użytkownika done

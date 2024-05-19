@@ -34,7 +34,9 @@ export const UserButton = () => {
                 <DropdownMenuItem>
                     <Link href='/profile'>Profil</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem ><Link href='/settings'>Ustawienia</Link></DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Link href='/settings'>Ustawienia</Link>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <LogoutButton>
                     <DropdownMenuItem>

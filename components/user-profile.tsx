@@ -48,7 +48,10 @@ export const UserProfile = ({ user, label }: UserInfoProps) => {
                 </div>
                 <div className='flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm'>
                     <p className='text-sm font-medium'>2FA</p>
-                    <Badge variant={user?.is2FAEnabled ? 'success' : 'destructive'}>
+                    <Badge
+                        variant={
+                            user?.is2FAEnabled ? 'success' : 'destructive'
+                        }>
                         {user?.is2FAEnabled ? 'ON' : 'OFF'}
                     </Badge>
                 </div>

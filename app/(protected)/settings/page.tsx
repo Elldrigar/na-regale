@@ -54,7 +54,6 @@ const Settings = () => {
         startTransition(() => {
             settingsAction(values)
                 .then((data) => {
-
                     if (data.error) {
                         setError(data.error)
                     }
