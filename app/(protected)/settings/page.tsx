@@ -3,6 +3,7 @@
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { SettingsSchema } from '@/schemas'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -19,8 +20,6 @@ import {
     FormMessage
 } from '@/components/ui/form'
 import { useCurrentUser } from '@/hooks/use-current-user'
-import { FormSuccess } from '@/components/notification/form-success'
-import { FormError } from '@/components/notification/form-error'
 import {
     Select,
     SelectContent,
@@ -35,8 +34,6 @@ import { useSession } from 'next-auth/react'
 const Settings = () => {
     const { update } = useSession()
     const user = useCurrentUser()
-    const [success, setSuccess] = useState<string | undefined>()
-    const [error, setError] = useState<string | undefined>()
     const [isPending, startTransition] = useTransition()
     const form = useForm<z.infer<typeof SettingsSchema>>({
         resolver: zodResolver(SettingsSchema),
@@ -55,14 +52,14 @@ const Settings = () => {
             settingsAction(values)
                 .then((data) => {
                     if (data.error) {
-                        setError(data.error)
+                        toast.error(data.error)
                     }
                     if (data.success) {
                         update()
-                        setSuccess(data.success)
+                        toast.success(data.success)
                     }
                 })
-                .catch(() => setError('Coś poszło nie tak!'))
+                .catch(() => toast.error('Coś poszło nie tak!'))
         })
     }
 
@@ -218,8 +215,6 @@ const Settings = () => {
                                 </>
                             )}
                         </div>
-                        <FormSuccess message={success} />
-                        <FormError message={error} />
                         <Button disabled={isPending} type='submit'>
                             Update!
                         </Button>
