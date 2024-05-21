@@ -5,14 +5,10 @@ export const GET = async () => {
     try {
         const categories = await db.category.findMany()
 
-        return new NextResponse(JSON.stringify(categories, { status: 200 }))
+        return NextResponse.json(categories)
+
     } catch (err) {
         console.log(err)
-        return new NextResponse(
-            JSON.stringify(
-                { message: 'Something went wrong!' },
-                { status: 500 }
-            )
-        )
+        return NextResponse.json('Coś poszło nie tak!')
     }
 }
