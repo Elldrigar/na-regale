@@ -83,19 +83,20 @@ model Confirmation2FA {
 }
 
 model Category {
-  id    String @id @default(cuid())
+  id    Int    @id @default(autoincrement())
   slug  String @unique
   title String
   Posts Post[]
 }
 
 model Post {
-  id        String   @id @default(cuid())
+  id        Int      @id @default(autoincrement())
   slug      String   @unique
   title     String
   desc      String
   views     Int      @default(0)
   catSlug   String
+  published Boolean  @default(false)
   cat       Category @relation(fields: [catSlug], references: [slug])
   userEmail String
   user      User     @relation(fields: [userEmail], references: [email])
