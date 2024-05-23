@@ -78,3 +78,7 @@ export const SettingsSchema = z
             path: ['password']
         }
     )
+
+export const PostSchema = z.object({
+    title: z.string().min(2, { message: 'Tytuł jest wymagany'}).max(50)
+})
