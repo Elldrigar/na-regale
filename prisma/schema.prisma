@@ -24,7 +24,7 @@ model User {
   accounts        Account[]
   is2FAEnabled    Boolean          @default(false)
   confirmation2FA Confirmation2FA?
-  Post            Post[]
+  posts           Post[]           @relation("WrittenPosts")
 }
 
 model Account {
@@ -84,20 +84,19 @@ model Confirmation2FA {
 
 model Category {
   id    Int    @id @default(autoincrement())
-  slug  String @unique
   title String
-  Posts Post[]
+  posts Post[]
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  slug      String   @unique
-  title     String
-  desc      String
-  views     Int      @default(0)
-  catSlug   String
-  published Boolean  @default(false)
-  cat       Category @relation(fields: [catSlug], references: [slug])
-  userEmail String
-  user      User     @relation(fields: [userEmail], references: [email])
+  id         Int        @id @default(autoincrement())
+  title      String
+  content    String
+  createdAt  DateTime   @default(now())
+  upadatedAt DateTime   @updatedAt
+  author     User       @relation("WrittenPosts", fields: [authorId], references: [id])
+  authorId   String
+  views      Int        @default(0)
+  published  Boolean    @default(false)
+  categories Category[]
 }
