@@ -10,6 +10,7 @@ datasource db {
 enum UserRole {
   USER
   ADMIN
+  CREATOR
 }
 
 model User {
