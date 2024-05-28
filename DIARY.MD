@@ -338,3 +338,10 @@
 > dzień 81, 19 dni do końca
 
 - Długo nie było wpisu tutaj
+
+# 28.05.2024
+
+> Dzień 89! zostało 11 dni do końca wyzwania 100dni :D
+> Od dziś refaktoryzuję cały projekt na osobnym branchu, a do głównej gałęzi będę tylko pushował tutaj diary :D
+
+- Refaktor dzień 1

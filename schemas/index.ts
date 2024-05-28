@@ -80,5 +80,8 @@ export const SettingsSchema = z
     )
 
 export const PostSchema = z.object({
-    title: z.string().min(2, { message: 'Tytuł jest wymagany'}).max(50)
+    title: z
+        .string()
+        .min(2, { message: 'Tytuł jest wymagany' })
+        .max(50, { message: 'Jest za duży!' })
 })
