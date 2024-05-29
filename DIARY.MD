@@ -345,3 +345,7 @@
 > Od dziś refaktoryzuję cały projekt na osobnym branchu, a do głównej gałęzi będę tylko pushował tutaj diary :D
 
 - Refaktor dzień 1
+
+> Dzień 90! 10 dni do końca!
+
+- Refaktor dzień 2
