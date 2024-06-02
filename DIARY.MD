@@ -361,3 +361,7 @@
 > 93 Dzień, 7 dni.. XD
 
 - Dummy ...
+
+> 94 Dzień, 6 dni... :-D
+
+- Ja chce tylko zagłosować na inne wymiatające projekty XD
