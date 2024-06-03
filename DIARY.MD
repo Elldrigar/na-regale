@@ -365,3 +365,7 @@
 > 94 Dzień, 6 dni... :-D
 
 - Ja chce tylko zagłosować na inne wymiatające projekty XD
+
+> 95 Dzień, 5 dni...
+
+- Dziś kot rozwalił mi monitor kubkiem po kawie... :(
