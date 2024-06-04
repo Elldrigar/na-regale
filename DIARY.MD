@@ -369,3 +369,6 @@
 > 95 Dzień, 5 dni...
 
 - Dziś kot rozwalił mi monitor kubkiem po kawie... :(
+
+> 96 Dzień, nowy monitor zamówiony... XD
+
