@@ -372,3 +372,5 @@
 
 > 96 Dzień, nowy monitor zamówiony... XD
 
+> 97 Dzień, monitor rozpakowany :D
+
